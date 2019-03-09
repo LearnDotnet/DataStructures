@@ -6,6 +6,17 @@ using System.Threading.Tasks;
 
 namespace DataStructures
 {
+    public class LinkedListNode
+    {
+        public int data;
+        public LinkedListNode next;
+
+        public LinkedListNode(int data)
+        {
+            this.data = data;
+            this.next = null;
+        }
+    }
     public class BSTNode
     {
         public int data;
@@ -133,4 +144,67 @@ namespace DataStructures
 
 
     }
+
+    public class Queue
+    {
+        LinkedListNode front;
+        LinkedListNode rear;
+
+        public Queue()
+        {
+            front = null;
+            rear = null;
+        }
+
+        public LinkedListNode GetNode(int data)
+        {
+            LinkedListNode node = new LinkedListNode(data);
+            return node;
+        }
+
+        public void Enqueue(int data)
+        {
+
+            LinkedListNode newNode = GetNode(data);
+            if (front == null)
+            {
+                front = rear = newNode;
+                return;
+            }
+
+            rear.next = newNode;
+            rear = newNode;
+
+
+        }
+
+        public int GetPeek()
+        {
+            if (front != null)
+            {
+                return front.data;
+            }
+            return -1;
+        }
+
+        public int DeQueue()
+        {
+            int peek = -1;
+            if (front != null)
+            {
+                peek = front.data;
+                front = front.next;
+            }
+
+            return peek;
+
+
+        }
+
+    }
+
+
+
+
+
 }
