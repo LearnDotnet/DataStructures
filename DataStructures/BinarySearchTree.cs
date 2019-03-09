@@ -3,33 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace DataStructures
+using DataStructures.Nodes;
+namespace DataStructures.BinarySearchTree
 {
-    public class LinkedListNode
-    {
-        public int data;
-        public LinkedListNode next;
-
-        public LinkedListNode(int data)
-        {
-            this.data = data;
-            this.next = null;
-        }
-    }
-    public class BSTNode
-    {
-        public int data;
-        public BSTNode left;
-        public BSTNode right;
-
-        public BSTNode(int data)
-        {
-            this.data = data;
-            this.left = null;
-            this.right = null;
-        }
-    }
+    
     public class BinarySearchTree
     {
         //public BSTNode root;
@@ -145,61 +122,10 @@ namespace DataStructures
 
     }
 
-    public class Queue
+   
+
+    public class Stack
     {
-        LinkedListNode front;
-        LinkedListNode rear;
-
-        public Queue()
-        {
-            front = null;
-            rear = null;
-        }
-
-        public LinkedListNode GetNode(int data)
-        {
-            LinkedListNode node = new LinkedListNode(data);
-            return node;
-        }
-
-        public void Enqueue(int data)
-        {
-
-            LinkedListNode newNode = GetNode(data);
-            if (front == null)
-            {
-                front = rear = newNode;
-                return;
-            }
-
-            rear.next = newNode;
-            rear = newNode;
-
-
-        }
-
-        public int GetPeek()
-        {
-            if (front != null)
-            {
-                return front.data;
-            }
-            return -1;
-        }
-
-        public int DeQueue()
-        {
-            int peek = -1;
-            if (front != null)
-            {
-                peek = front.data;
-                front = front.next;
-            }
-
-            return peek;
-
-
-        }
 
     }
 
