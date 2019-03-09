@@ -1,6 +1,7 @@
 ﻿using System;
 using DataStructures.Queues;
 using DataStructures.BinarySearchTree;
+using DataStructures.Stacks;
 namespace DataStructures
 {
     class MainProgram
@@ -44,16 +45,30 @@ namespace DataStructures
 
             #endregion
 
+            #region Queeue
+            //Queue Q = new Queue();
+            //Q.Enqueue(10);
+            //Q.Enqueue(15);
+            //Q.Enqueue(20);
 
-            Queue Q = new Queue();
-            Q.Enqueue(10);
-            Q.Enqueue(15);
-            Q.Enqueue(20);
+            //Console.WriteLine("Dequeue={0}", Q.DeQueue());
+            //Console.WriteLine("Dequeue={0}", Q.DeQueue());
+            //Console.WriteLine("Dequeue={0}", Q.DeQueue());
+            //Console.WriteLine("Dequeue={0}", Q.DeQueue());
+            #endregion
 
-            Console.WriteLine("Dequeue={0}", Q.DeQueue());
-            Console.WriteLine("Dequeue={0}", Q.DeQueue());
-            Console.WriteLine("Dequeue={0}", Q.DeQueue());
-            Console.WriteLine("Dequeue={0}", Q.DeQueue());
+
+            Stack Q = new Stack();
+            Console.WriteLine("Pop={0}", Q.Pop());
+            Q.Push(10);
+            Console.WriteLine("Pop={0}", Q.Pop());
+            Q.Push(15);
+            Q.Push(20);
+
+            Console.WriteLine("Pop={0}", Q.Pop());
+            
+            Console.WriteLine("Pop={0}", Q.Pop());
+            Console.WriteLine("Pop={0}", Q.Pop());
 
 
 
